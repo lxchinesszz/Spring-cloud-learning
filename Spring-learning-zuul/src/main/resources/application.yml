@@ -1,0 +1,50 @@
+# 当前环境
+spring:
+  profiles:
+    active: develop
+  application:
+    name: eureka-zuul-apigateway
+  zipkin:
+    base-url: http://localhost:40000
+# 服务端口号
+server:
+  port: 50000
+# 是否注册为集群形式
+eureka:
+  instance:
+    appname: eureka-zuul-apigateway-service
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://blm:blm123@localhost:10001/eureka/,http://blm:blm123@localhost:10002/eureka/
+
+# 配置路由
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      # spring.application.name的名称
+      serviceId: eureka-provider-service
+#      url: http://127.0.0.1:20001/
+    api-b:
+      path: /api-b/**
+       # spring.application.name的名称
+      serviceId: eureka-provider-service
+#      url: http://127.0.0.1:20002/
+ribbon:
+  eager-load:
+    enabled: true
+security:
+  user:
+    name: blm
+    password: blm123
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web.servlet.DispatchServlet: debug
+
+
+
+

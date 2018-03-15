@@ -1,0 +1,21 @@
+# 当前环境
+spring:
+  profiles:
+    active: develop
+  application:
+    name: eureka-consul
+  cloud:
+      consul:
+        host: localhost
+        port: 8500
+        discovery:
+          healthCheckInterval: 15s
+          instance-id: consul-miya
+          register: false
+          health-check-url: ${management.context-path}/health
+          tags: foo1=bar1,foo2=bar2,foo3
+
+# 服务端口号
+server:
+  port: 10000
+

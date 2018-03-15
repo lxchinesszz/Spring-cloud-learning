@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Spring-learning-bus" />
+        <module name="Spring-learning-config" />
+        <module name="Spring-learning-Consul" />
+        <module name="Spring-learning-consul" />
+        <module name="Spring-learning-eurka" />
+        <module name="Spring-learning-eurka-01" />
+        <module name="Spring-learning-eurka-02" />
+        <module name="Spring-learning-hystrix-turbine" />
+        <module name="Spring-learning-model" />
+        <module name="Spring-learning-ribbon-consume" />
+        <module name="Spring-learning-service-01" />
+        <module name="Spring-learning-service-02" />
+        <module name="Spring-learning-zipkin" />
+        <module name="Spring-learning-zuul" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Spring-learning" target="1.8" />
+      <module name="Spring-learning-bus" target="1.8" />
+      <module name="Spring-learning-config" target="1.8" />
+      <module name="Spring-learning-consul" target="1.8" />
+      <module name="Spring-learning-Consul" target="1.8" />
+      <module name="Spring-learning-eurka" target="1.5" />
+      <module name="Spring-learning-eurka-01" target="1.8" />
+      <module name="Spring-learning-eurka-02" target="1.8" />
+      <module name="Spring-learning-hystrix-turbine" target="1.8" />
+      <module name="Spring-learning-model" target="1.8" />
+      <module name="Spring-learning-ribbon-consume" target="1.8" />
+      <module name="Spring-learning-service-01" target="1.8" />
+      <module name="Spring-learning-service-02" target="1.8" />
+      <module name="Spring-learning-zipkin" target="1.8" />
+      <module name="Spring-learning-zuul" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

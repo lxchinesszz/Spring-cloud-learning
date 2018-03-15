@@ -1,0 +1,42 @@
+# 当前环境
+spring:
+  profiles:
+    active: develop
+  application:
+    name: eureka-consume
+  zipkin:
+    base-url: http://localhost:40000
+  sleuth:
+    sampler:
+      #采样百分之10%=0.1 100%=1
+      percentage: 1.0
+
+# 服务端口号
+server:
+  port: 30000
+# 是否注册为集群形式
+eureka:
+  instance:
+    appname: eureka-ribbon
+    #使用https
+    secure-port-enabled: true
+    non-secure-port-enabled: false
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://blm:blm123@localhost:10001/eureka/,http://blm:blm123@localhost:10002/eureka/
+
+# 添加密码
+security:
+  basic:
+    enabled: true
+  user:
+    name: blm
+    password: blm123
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web.servlet.DispatchServlet: debug
+

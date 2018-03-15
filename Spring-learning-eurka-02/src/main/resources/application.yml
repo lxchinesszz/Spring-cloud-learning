@@ -1,0 +1,39 @@
+# 当前环境
+spring:
+  profiles:
+    active: develop
+  application:
+      name: eureka-server
+  zipkin:
+    base-url: http://localhost:40000
+  sleuth:
+    sampler:
+      #采样百分之10%=0.1 100%=1
+      percentage: 1.0
+server:
+  port: 10002
+# 是否注册为集群形式
+eureka:
+  instance:
+    appname: eureka-service-02
+    #使用https
+    secure-port-enabled: true
+    non-secure-port-enabled: false
+    metadata-map:
+      customer-1: eureka-02-customer-value-01
+      customer-2: eureka-02-customer-value-02
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://blm:blm123@localhost:10001/eureka/,http://blm:blm123@localhost:10002/eureka/
+
+
+
+# 添加用户名和用户密码
+security:
+  basic:
+    enabled: true
+  user:
+    name: blm
+    password: blm123

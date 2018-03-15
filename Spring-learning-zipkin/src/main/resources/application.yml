@@ -1,0 +1,19 @@
+# 当前环境
+spring:
+  profiles:
+    active: develop
+  application:
+    name: eureka-zipkin
+# 服务端口号
+server:
+  port: 40000
+# 是否注册为集群形式
+eureka:
+  instance:
+    appname: eureka-zipkin-service
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://blm:blm123@localhost:10001/eureka/,http://blm:blm123@localhost:10002/eureka/
+

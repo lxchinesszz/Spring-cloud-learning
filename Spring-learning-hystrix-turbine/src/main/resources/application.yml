@@ -1,0 +1,41 @@
+# 当前环境
+spring:
+  profiles:
+    active: develop
+  application:
+    name: hystrix-turbine
+  zipkin:
+    base-url: http://localhost:40000
+  sleuth:
+    sampler:
+      #采样百分之10%=0.1 100%=1
+      percentage: 1.0
+# 服务端口号
+server:
+  port: 12000
+# 是否注册为集群形式
+eureka:
+  instance:
+    appname: hystrix-turbine
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://blm:blm123@localhost:10001/eureka/,http://blm:blm123@localhost:10002/eureka/
+
+turbine:
+  aggregator:
+  # 指定聚合哪些集群，多个使用","分割，默认为default。可使用http://.../turbine.stream?cluster={clusterConfig之一}访问
+    clusterConfig: default
+  # 配置Eureka中的serviceId列表，表明监控哪些服务
+  appConfig: eureka-ribbon
+  clusterNameExpression: new String("default")
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web.servlet.DispatchServlet: debug
+security:
+  user:
+    password: blm123
+    name: blm

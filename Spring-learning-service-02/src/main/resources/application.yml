@@ -1,0 +1,29 @@
+# 当前环境
+spring:
+  profiles:
+    active: develop
+  application:
+    name: eureka-provider-service
+  zipkin:
+    base-url: http://localhost:40000
+  sleuth:
+    sampler:
+      #采样百分之10%=0.1 100%=1.0
+      percentage: 1.0
+# 服务端口号
+server:
+  port: 20002
+# 是否注册为集群形式
+eureka:
+  instance:
+    appname: eureka-provider-service-02
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://blm:blm123@localhost:10001/eureka/,http://blm:blm123@localhost:10002/eureka/
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web.servlet.DispatchServlet: debug
