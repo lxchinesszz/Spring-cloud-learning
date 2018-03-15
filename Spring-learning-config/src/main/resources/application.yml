@@ -5,11 +5,12 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/lxchinesszz/Spring-learning.git
-          search-paths: Spring-learning/Spring-learning-config/
-          username: lxchinesszz
-          password: 950914lx
+#          uri: https://github.com/lxchinesszz/Spring-learning.git
+          uri: https://github.com/forezp/SpringcloudConfig.git
+          search-paths: respo
+#          search-paths: Spring-learning/Spring-learning-config/
       label: master
+
 
 server:
   port: 10003
@@ -21,4 +22,6 @@ eureka:
     fetch-registry: true
     serviceUrl:
       defaultZone: http://blm:blm123@localhost:10001/eureka/,http://blm:blm123@localhost:10002/eureka/
-
+management:
+  security:
+    enabled: false
