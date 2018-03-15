@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/lxchinesszz/Spring-learning.git
+          search-paths: Spring-learning/Spring-learning-config/
+          username: lxchinesszz
+          password: 950914lx
+      label: master
+
+server:
+  port: 10003
+
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://blm:blm123@localhost:10001/eureka/,http://blm:blm123@localhost:10002/eureka/
+

@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Spring-learning-bus" />
         <module name="Spring-learning-config" />
+        <module name="Spring-learning-config-client" />
         <module name="Spring-learning-Consul" />
         <module name="Spring-learning-consul" />
         <module name="Spring-learning-eurka" />
@@ -26,6 +27,7 @@
       <module name="Spring-learning" target="1.8" />
       <module name="Spring-learning-bus" target="1.8" />
       <module name="Spring-learning-config" target="1.8" />
+      <module name="Spring-learning-config-client" target="1.8" />
       <module name="Spring-learning-consul" target="1.8" />
       <module name="Spring-learning-Consul" target="1.8" />
       <module name="Spring-learning-eurka" target="1.5" />
