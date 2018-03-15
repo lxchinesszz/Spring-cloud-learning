@@ -1,0 +1,30 @@
+
+
+
+
+
+
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      label: master
+      profile: dev
+      discovery:
+        service-id: config-server
+        enabled: true
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://blm:blm123@localhost:10001/eureka/,http://blm:blm123@localhost:10002/eureka/
+server:
+  port: 10004
+
+
+
+
+
