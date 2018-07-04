@@ -3,9 +3,9 @@
 SpringCloud集群负载均衡及全链路监控
 
 
-![](https://p3.pstatp.com/large/pgc-image/1524386131941ad98fd6d92)
+![](http://wx2.sinaimg.cn/mw690/0060lm7Tly1fsy09ih3p6j311905bt9c.jpg)
 
->东方既白是小编我的头条号，想获取到源码地主的童鞋，可以关注小编，私信发送，[SpringCloud架构]即可获取到GITHUB源码地址，最后谢谢您的阅读，小编会每天为你分享一点小知识，谢谢您的关注。
+>小编我的头条号，想获取到源码地主的童鞋，可以关注小编，私信发送，[SpringCloud架构]即可获取到GITHUB源码地址，最后谢谢您的阅读，小编会每天为你分享一点小知识，谢谢您的关注。
 
 ## 前言
 
