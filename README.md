@@ -3,8 +3,6 @@
 SpringCloud集群负载均衡及全链路监控
 
 
-![](http://wx2.sinaimg.cn/mw690/0060lm7Tly1fsy09ih3p6j311905bt9c.jpg)
-
 
 ## 前言
 
